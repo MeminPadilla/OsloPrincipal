@@ -3,89 +3,85 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Oslo Viajes - VSL</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <title>¿Es hora de desconectar? | Oslo Viajes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Quicksand', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f9f9f9;
-    }
-    .hero {
-      text-align: center;
-      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920') no-repeat center center/cover;
+      background: url('https://images.unsplash.com/photo-1553456558-aff63285bdd2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920') no-repeat center center/cover;
       color: white;
-      padding: 120px 20px;
     }
-    .hero h1 {
-      font-size: 3.5rem;
-      margin-bottom: 20px;
-      animation: fadeIn 2s ease;
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.6);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
     }
-    .hero p {
-      font-size: 1.5rem;
+    .container {
+      position: relative;
+      text-align: center;
+      padding: 50px 20px;
+      z-index: 1;
+    }
+    h1 {
+      font-size: 2.5rem;
       margin-bottom: 20px;
-      animation: fadeIn 2.5s ease;
+    }
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin-top: 30px;
+    }
+    .image-grid img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     }
     .cta-btn {
-      background-color: #ff7e47;
+      background-color: #ff6e40;
       color: white;
-      padding: 15px 40px;
-      font-size: 1.2rem;
-      text-decoration: none;
+      padding: 15px 30px;
+      font-size: 1rem;
+      border: none;
       border-radius: 50px;
+      text-decoration: none;
+      cursor: pointer;
       transition: 0.3s;
-      animation: fadeIn 3s ease;
     }
     .cta-btn:hover {
-      background-color: #ff5733;
-      transform: scale(1.05);
-    }
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(-20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    .carousel {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      margin: 30px auto;
-      padding: 20px;
-    }
-    .carousel img {
-      width: 300px;
-      height: 200px;
-      border-radius: 15px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .carousel img:hover {
-      transform: scale(1.05);
-      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+      background-color: #ff4c29;
     }
   </style>
 </head>
 <body>
-
-  <div class="hero">
+  <div class="overlay"></div>
+  <div class="container">
     <h1>¿Es hora de desconectar?</h1>
-    <p>El 80% de las personas no se desconectan del trabajo ni los fines de semana.</p>
-    <p>Descubre destinos que cambiarán tu vida.</p>
-    <a href="main.html" class="cta-btn">Explorar Destinos</a>
+    <p>El 80% de las personas no desconectan del trabajo ni los fines de semana. 
+    <br>Relajarte no es un lujo, ¡es una necesidad!</p>
+    <div class="image-grid">
+      <img src="https://source.unsplash.com/800x600/?culture" alt="Destino cultural">
+      <img src="https://source.unsplash.com/800x600/?beach" alt="Playa paradisíaca">
+      <img src="https://source.unsplash.com/800x600/?snow" alt="Destino nevado">
+    </div>
+    <div class="image-grid">
+      <img src="https://source.unsplash.com/800x600/?adventure" alt="Aventura en la nieve">
+      <img src="https://source.unsplash.com/800x600/?japan" alt="Cultura japonesa">
+      <img src="https://source.unsplash.com/800x600/?tropical" alt="Playas tropicales">
+    </div>
+    <a href="main.html" class="cta-btn">Descubre destinos inolvidables</a>
   </div>
-
-  <div class="carousel">
-    <img src="https://images.unsplash.com/photo-1546484952-55d84a56d88d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600" alt="Playa Tropical">
-    <img src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600" alt="Montañas">
-    <img src="https://images.unsplash.com/photo-1533681567954-c5f2c48163d3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600" alt="Destinos Urbanos">
-  </div>
-
 </body>
 </html>
