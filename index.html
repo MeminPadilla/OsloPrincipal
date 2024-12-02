@@ -1,90 +1,167 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>¿Es hora de desconectar? | Oslo Viajes</title>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Quicksand', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: url('https://images.unsplash.com/photo-1553456558-aff63285bdd2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920') no-repeat center center/cover;
-      color: white;
-      overflow-x: hidden;
-    }
-    .overlay {
-      background-color: rgba(0, 0, 0, 0.6);
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
-    .container {
-      position: relative;
-      text-align: center;
-      padding: 50px 20px;
-      z-index: 1;
-    }
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-    }
-    p {
-      font-size: 1.2rem;
-      margin-bottom: 30px;
-      line-height: 1.6;
-    }
-    .image-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 15px;
-      margin-top: 30px;
-    }
-    .image-grid img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    }
-    .cta-btn {
-      background-color: #ff6e40;
-      color: white;
-      padding: 15px 30px;
-      font-size: 1rem;
-      border: none;
-      border-radius: 50px;
-      text-decoration: none;
-      cursor: pointer;
-      transition: 0.3s;
-      display: inline-block;
-      margin-top: 20px;
-    }
-    .cta-btn:hover {
-      background-color: #ff4c29;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oslo Viajes | Descubre Tu Próxima Aventura</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Outfit', sans-serif;
+        }
+        .gradient-overlay {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6));
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #FF6B6B 0%, #4ECDC4 100%);
+        }
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        .image-grid img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 1rem;
+            transition: transform 0.3s ease;
+        }
+        .image-grid img:hover {
+            transform: scale(1.05);
+        }
+        .cta-btn {
+            background: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%);
+            transition: transform 0.3s ease;
+        }
+        .cta-btn:hover {
+            transform: translateY(-2px);
+        }
+        .benefit-icon {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto 1rem;
+        }
+    </style>
 </head>
 <body>
-  <div class="overlay"></div>
-  <div class="container">
-    <h1>¿Es hora de desconectar?</h1>
-    <p>El 80% de las personas no desconectan del trabajo ni los fines de semana. 
-    <br>Relajarte no es un lujo, ¡es una necesidad!</p>
-    <div class="image-grid">
-      <img src="https://images.unsplash.com/photo-1572161942980-b7d0daed9b34?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800" alt="Destino cultural">
-      <img src="https://images.unsplash.com/photo-1519923834699-d1bfb6c40f42?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800" alt="Playa paradisíaca">
-      <img src="https://images.unsplash.com/photo-1544531587-d5391f1e3576?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800" alt="Destino nevado">
+
+<!-- Index Page -->
+<div id="index-page" class="min-h-screen">
+    <div class="gradient-overlay absolute inset-0">
+        <div class="container mx-auto px-4 py-20 relative z-10 text-center text-white">
+            <h1 class="text-5xl md:text-7xl font-bold mb-8">¿Es hora de desconectar?</h1>
+            <p class="text-xl md:text-2xl mb-12 max-w-2xl mx-auto">
+                El 80% de las personas no desconectan del trabajo ni los fines de semana.
+                <span class="block mt-4">Relajarte no es un lujo, ¡es una necesidad!</span>
+            </p>
+
+            <div class="image-grid">
+                 <img src="oslo_images/destino_cultural.jpg" alt="Destino cultural"> ="shadow-lg">
+                <img src="oslo_images/playa_pradisiaca.jpg" alt="Playa paradisíaca" class="shadow-lg">
+                <img src="oslo_images/destino_nevado.jpg" alt="Destino nevado" class="shadow-lg">
+            </div>
+            <div class="image-grid">
+                <img src="oslo_images/aventura_nieve.jpg" alt="Aventura en la nieve" class="shadow-lg">
+                <img src="oslo_images/cultura_japonesa.jpg" alt="Cultura japonesa" class="shadow-lg">
+                <img src="oslo_images/playas_tropicales" alt="Playas tropicales" class="shadow-lg">
+            </div>
+
+            <a href="main.html" class="cta-btn inline-block px-12 py-4 text-xl font-semibold text-white rounded-full shadow-lg">
+                Descubre destinos inolvidables
+            </a>
+        </div>
     </div>
-    <div class="image-grid">
-      <img src="https://images.unsplash.com/photo-1549877452-eef3e183726c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800" alt="Aventura en la nieve">
-      <img src="https://images.unsplash.com/photo-1543484771-51e6e0447aa4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800" alt="Cultura japonesa">
-      <img src="https://images.unsplash.com/photo-1553484771-51e6e0447aa4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800" alt="Playas tropicales">
+</div>
+
+<!-- Main Page -->
+<div id="main-page" class="min-h-screen bg-white">
+    <div class="container mx-auto px-4 py-20">
+        <div class="text-center mb-20">
+            <h1 class="text-5xl font-bold mb-4">Oslo Viajes</h1>
+            <p class="text-xl text-gray-600">Creamos momentos inolvidables</p>
+        </div>
+
+        <section class="mb-20">
+            <h2 class="text-3xl font-bold text-center mb-12">Conoce a Pamela, nuestra CEO</h2>
+            <div class="max-w-4xl mx-auto bg-gray-100 rounded-2xl p-8">
+                <div class="aspect-video rounded-xl overflow-hidden bg-black mb-4">
+                    <!-- Placeholder para el video -->
+                    <img src="/api/placeholder/1920/1080" alt="Pamela CEO Video Placeholder" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-20">
+            <h2 class="text-3xl font-bold text-center mb-12">¿Por qué elegirnos?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center p-6 rounded-xl bg-gray-50">
+                    <img src="oslo_images/plan_personalizado.png" alt="Plan Personalizado" class="benefit-icon">
+                    <h3 class="text-xl font-semibold mb-2">Planes personalizados</h3>
+                    <p class="text-gray-600">Diseñamos cada viaje según tus preferencias</p>
+                </div>
+                <div class="text-center p-6 rounded-xl bg-gray-50">
+                    <img src="oslo_images/soporte_247.png" alt="Soporte 24/7" class="benefit-icon">
+                    <h3 class="text-xl font-semibold mb-2">Soporte 24/7</h3>
+                    <p class="text-gray-600">Estamos para ti en todo momento</p>
+                </div>
+                <div class="text-center p-6 rounded-xl bg-gray-50">
+                    <img src="oslo_images/mejores_precios.png" alt="Mejores Precios" class="benefit-icon">
+                    <h3 class="text-xl font-semibold mb-2">Los mejores precios</h3>
+                    <p class="text-gray-600">Calidad y valor garantizados</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="text-center">
+            <a href="captura.html" class="cta-btn inline-block px-12 py-4 text-xl font-semibold text-white rounded-full shadow-lg">
+                ¡Quiero mi guía de viajes!
+            </a>
+        </div>
     </div>
-    <a href="main.html" class="cta-btn">Descubre destinos inolvidables</a>
-  </div>
+</div>
+
+<!-- Capture Page -->
+<div id="capture-page" class="min-h-screen bg-gray-50">
+    <div class="container mx-auto px-4 py-20">
+        <div class="max-w-md mx-auto bg-white rounded-2xl shadow-xl p-8">
+            <h2 class="text-3xl font-bold text-center mb-8">¡Obtén tu guía gratuita!</h2>
+            <form class="space-y-6">
+                <div>
+                    <input type="text" placeholder="Nombre completo" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500">
+                </div>
+                <div>
+                    <input type="email" placeholder="Correo electrónico" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500">
+                </div>
+                <button type="submit" class="w-full cta-btn py-4 text-xl font-semibold text-white rounded-lg">
+                    Descargar
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Thanks Page -->
+<div id="thanks-page" class="min-h-screen bg-gray-50 flex items-center">
+    <div class="container mx-auto px-4 text-center">
+        <div class="max-w-2xl mx-auto bg-white rounded-2xl shadow-xl p-12">
+            <h1 class="text-4xl font-bold mb-6">¡Tu próximo viaje comienza aquí!</h1>
+            <p class="text-xl text-gray-600 mb-8">
+                Nos contactaremos pronto para ayudarte a planear la experiencia de tus sueños.
+            </p>
+            <div class="flex justify-center space-x-4">
+                <a href="index.html" class="px-8 py-3 text-gray-600 border border-gray-300 rounded-lg hover:bg-gray-50 transition">
+                    Volver al inicio
+                </a>
+                <a href="https://instagram.com/osloviajes" target="_blank" class="px-8 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg hover:opacity-90 transition">
+                    Síguenos en Instagram
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>
